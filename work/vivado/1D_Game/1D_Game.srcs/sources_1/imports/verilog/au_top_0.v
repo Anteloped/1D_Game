@@ -7,35 +7,191 @@
 module au_top_0 (
     input clk,
     input rst_n,
-    output reg [7:0] led,
     input usb_rx,
     output reg usb_tx,
     output reg [23:0] io_led,
-    output reg [7:0] io_seg,
-    output reg [3:0] io_sel,
+    output reg [7:0] io_led1,
+    input [15:0] io_dip,
     input [4:0] io_button,
-    input [23:0] io_dip
+    output reg [6:0] io_seg,
+    output reg [1:0] io_sel,
+    output reg [6:0] io_seg2,
+    output reg [1:0] io_sel2,
+    output reg [6:0] io_seg3,
+    output reg [1:0] io_sel3,
+    output reg [6:0] io_seg4,
+    output reg [0:0] io_sel4
   );
   
   
   
   reg rst;
   
-  wire [1-1:0] M_reset_cond_out;
-  reg [1-1:0] M_reset_cond_in;
-  reset_conditioner_1 reset_cond (
+  wire [1-1:0] M_start_button_cond_out;
+  reg [1-1:0] M_start_button_cond_in;
+  button_conditioner_1 start_button_cond (
     .clk(clk),
-    .in(M_reset_cond_in),
-    .out(M_reset_cond_out)
+    .in(M_start_button_cond_in),
+    .out(M_start_button_cond_out)
+  );
+  wire [1-1:0] M_edge_start_button_out;
+  reg [1-1:0] M_edge_start_button_in;
+  edge_detector_2 edge_start_button (
+    .clk(clk),
+    .in(M_edge_start_button_in),
+    .out(M_edge_start_button_out)
+  );
+  wire [1-1:0] M_p1_button1_out;
+  reg [1-1:0] M_p1_button1_in;
+  button_conditioner_1 p1_button1 (
+    .clk(clk),
+    .in(M_p1_button1_in),
+    .out(M_p1_button1_out)
+  );
+  wire [1-1:0] M_edge_p1_button1_out;
+  reg [1-1:0] M_edge_p1_button1_in;
+  edge_detector_2 edge_p1_button1 (
+    .clk(clk),
+    .in(M_edge_p1_button1_in),
+    .out(M_edge_p1_button1_out)
+  );
+  wire [1-1:0] M_p1_button2_out;
+  reg [1-1:0] M_p1_button2_in;
+  button_conditioner_1 p1_button2 (
+    .clk(clk),
+    .in(M_p1_button2_in),
+    .out(M_p1_button2_out)
+  );
+  wire [1-1:0] M_edge_p1_button2_out;
+  reg [1-1:0] M_edge_p1_button2_in;
+  edge_detector_2 edge_p1_button2 (
+    .clk(clk),
+    .in(M_edge_p1_button2_in),
+    .out(M_edge_p1_button2_out)
+  );
+  wire [1-1:0] M_p1_button3_out;
+  reg [1-1:0] M_p1_button3_in;
+  button_conditioner_1 p1_button3 (
+    .clk(clk),
+    .in(M_p1_button3_in),
+    .out(M_p1_button3_out)
+  );
+  wire [1-1:0] M_edge_p1_button3_out;
+  reg [1-1:0] M_edge_p1_button3_in;
+  edge_detector_2 edge_p1_button3 (
+    .clk(clk),
+    .in(M_edge_p1_button3_in),
+    .out(M_edge_p1_button3_out)
+  );
+  wire [1-1:0] M_p1_button4_out;
+  reg [1-1:0] M_p1_button4_in;
+  button_conditioner_1 p1_button4 (
+    .clk(clk),
+    .in(M_p1_button4_in),
+    .out(M_p1_button4_out)
+  );
+  wire [1-1:0] M_edge_p1_button4_out;
+  reg [1-1:0] M_edge_p1_button4_in;
+  edge_detector_2 edge_p1_button4 (
+    .clk(clk),
+    .in(M_edge_p1_button4_in),
+    .out(M_edge_p1_button4_out)
+  );
+  wire [1-1:0] M_edge_detector_slow_timer_out;
+  reg [1-1:0] M_edge_detector_slow_timer_in;
+  edge_detector_2 edge_detector_slow_timer (
+    .clk(clk),
+    .in(M_edge_detector_slow_timer_in),
+    .out(M_edge_detector_slow_timer_out)
+  );
+  wire [1-1:0] M_slow_timer_value;
+  counter_3 slow_timer (
+    .clk(clk),
+    .rst(rst),
+    .value(M_slow_timer_value)
+  );
+  wire [32-1:0] M_random_num;
+  reg [1-1:0] M_random_next;
+  reg [32-1:0] M_random_seed;
+  pn_gen_4 random (
+    .clk(clk),
+    .rst(rst),
+    .next(M_random_next),
+    .seed(M_random_seed),
+    .num(M_random_num)
+  );
+  wire [8-1:0] M_game_beta_main_timer_segs;
+  wire [4-1:0] M_game_beta_main_timer_sel;
+  wire [8-1:0] M_game_beta_mini_timer_5_segs;
+  wire [16-1:0] M_game_beta_p1_led1;
+  wire [16-1:0] M_game_beta_p1_led2;
+  wire [16-1:0] M_game_beta_p1_led3;
+  wire [16-1:0] M_game_beta_p1_led4;
+  wire [16-1:0] M_game_beta_p2_led1;
+  wire [16-1:0] M_game_beta_p2_led2;
+  wire [16-1:0] M_game_beta_p2_led3;
+  wire [16-1:0] M_game_beta_p2_led4;
+  reg [1-1:0] M_game_beta_start_button;
+  reg [1-1:0] M_game_beta_p1_button1;
+  reg [1-1:0] M_game_beta_p1_button2;
+  reg [1-1:0] M_game_beta_p1_button3;
+  reg [1-1:0] M_game_beta_p1_button4;
+  reg [16-1:0] M_game_beta_rng16;
+  reg [1-1:0] M_game_beta_dec;
+  beta_5 game_beta (
+    .clk(clk),
+    .rst(rst),
+    .start_button(M_game_beta_start_button),
+    .p1_button1(M_game_beta_p1_button1),
+    .p1_button2(M_game_beta_p1_button2),
+    .p1_button3(M_game_beta_p1_button3),
+    .p1_button4(M_game_beta_p1_button4),
+    .rng16(M_game_beta_rng16),
+    .dec(M_game_beta_dec),
+    .main_timer_segs(M_game_beta_main_timer_segs),
+    .main_timer_sel(M_game_beta_main_timer_sel),
+    .mini_timer_5_segs(M_game_beta_mini_timer_5_segs),
+    .p1_led1(M_game_beta_p1_led1),
+    .p1_led2(M_game_beta_p1_led2),
+    .p1_led3(M_game_beta_p1_led3),
+    .p1_led4(M_game_beta_p1_led4),
+    .p2_led1(M_game_beta_p2_led1),
+    .p2_led2(M_game_beta_p2_led2),
+    .p2_led3(M_game_beta_p2_led3),
+    .p2_led4(M_game_beta_p2_led4)
   );
   
   always @* begin
-    M_reset_cond_in = ~rst_n;
-    rst = M_reset_cond_out;
     usb_tx = usb_rx;
-    led = 8'h00;
+    io_sel = 1'h0;
+    io_sel2 = 1'h0;
+    io_sel3 = 1'h0;
+    io_sel4 = 1'h0;
     io_led = 24'h000000;
-    io_seg = 8'hff;
-    io_sel = 4'hf;
+    io_led1 = 8'h00;
+    io_seg = 1'h0;
+    io_seg2 = 1'h0;
+    io_seg3 = 1'h0;
+    io_seg4 = 1'h0;
+    M_random_seed = 128'h843233523a613966423b622562592c62;
+    M_random_next = M_edge_detector_slow_timer_out;
+    M_edge_detector_slow_timer_in = M_slow_timer_value;
+    M_game_beta_dec = M_edge_detector_slow_timer_out;
+    M_game_beta_rng16 = M_random_num[0+15-:16];
+    M_start_button_cond_in = io_dip[8+0+0-:1];
+    M_edge_start_button_in = M_start_button_cond_out;
+    M_game_beta_start_button = M_edge_start_button_out;
+    M_p1_button1_in = io_dip[0+0+0-:1];
+    M_p1_button2_in = io_dip[0+1+0-:1];
+    M_p1_button3_in = io_dip[0+2+0-:1];
+    M_p1_button4_in = io_dip[8+3+0-:1];
+    M_edge_p1_button1_in = M_p1_button1_out;
+    M_edge_p1_button2_in = M_p1_button2_out;
+    M_edge_p1_button3_in = M_p1_button3_out;
+    M_edge_p1_button4_in = M_p1_button4_out;
+    M_game_beta_p1_button1 = M_edge_p1_button1_out;
+    M_game_beta_p1_button2 = M_edge_p1_button2_out;
+    M_game_beta_p1_button3 = M_edge_p1_button3_out;
+    M_game_beta_p1_button4 = M_edge_p1_button4_out;
   end
 endmodule

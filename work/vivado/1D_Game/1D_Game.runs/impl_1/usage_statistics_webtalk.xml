@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Fri Apr 15 17:32:11 2022'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Fri Apr 15 20:42:55 2022'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="3064766" description="" />
-  <keyValuePair key="date_generated" value="Fri Apr 15 17:32:11 2022" description="" />
+  <keyValuePair key="date_generated" value="Fri Apr 15 20:42:55 2022" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2020.2 (64-bit)" description="" />
-  <keyValuePair key="project_id" value="0f500d4f39024a468feb0b3a15377504" description="" />
+  <keyValuePair key="project_id" value="9ab8d50eeea94c7192caced1a3d31fc3" description="" />
   <keyValuePair key="project_iteration" value="1" description="" />
   <keyValuePair key="random_id" value="d4246fa94d9658398900dd1b7c692007" description="" />
   <keyValuePair key="registration_id" value="d4246fa94d9658398900dd1b7c692007" description="" />
@@ -67,6 +67,10 @@
    <keyValuePair key="-ruledecks" value="default::[not_specified]" description="" />
    <keyValuePair key="-upgrade_cw" value="default::[not_specified]" description="" />
    <keyValuePair key="-waived" value="default::[not_specified]" description="" />
+  </section>
+  <section name="results" level="2" order="2" description="">
+   <keyValuePair key="cfgbvs-1" value="1" description="" />
+   <keyValuePair key="plio-3" value="1" description="" />
   </section>
  </section>
  <section name="report_methodology" level="1" order="5" description="">
@@ -272,7 +276,7 @@
    <keyValuePair key="hsul_12" value="0" description="" />
    <keyValuePair key="lvcmos12" value="0" description="" />
    <keyValuePair key="lvcmos15" value="0" description="" />
-   <keyValuePair key="lvcmos18" value="0" description="" />
+   <keyValuePair key="lvcmos18" value="1" description="" />
    <keyValuePair key="lvcmos25" value="0" description="" />
    <keyValuePair key="lvcmos33" value="1" description="" />
    <keyValuePair key="lvds_25" value="0" description="" />
@@ -308,7 +312,7 @@
    <keyValuePair key="ibuf_functional_category" value="IO" description="" />
    <keyValuePair key="ibuf_used" value="1" description="" />
    <keyValuePair key="obuf_functional_category" value="IO" description="" />
-   <keyValuePair key="obuf_used" value="45" description="" />
+   <keyValuePair key="obuf_used" value="68" description="" />
   </section>
   <section name="slice_logic" level="2" order="6" description="">
    <keyValuePair key="f7_muxes_available" value="16300" description="" />
@@ -456,24 +460,22 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:00:35s" description="" />
+   <keyValuePair key="elapsed" value="00:00:26s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="8.668MB" description="" />
-   <keyValuePair key="memory_peak" value="1025.895MB" description="" />
+   <keyValuePair key="memory_gain" value="3.008MB" description="" />
+   <keyValuePair key="memory_peak" value="1020.812MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="9" description="">
   <section name="post_unisim_transformation" level="2" order="1" description="">
    <keyValuePair key="gnd" value="1" description="" />
    <keyValuePair key="ibuf" value="1" description="" />
-   <keyValuePair key="obuf" value="45" description="" />
-   <keyValuePair key="vcc" value="1" description="" />
+   <keyValuePair key="obuf" value="68" description="" />
   </section>
   <section name="pre_unisim_transformation" level="2" order="2" description="">
    <keyValuePair key="gnd" value="1" description="" />
    <keyValuePair key="ibuf" value="1" description="" />
-   <keyValuePair key="obuf" value="45" description="" />
-   <keyValuePair key="vcc" value="1" description="" />
+   <keyValuePair key="obuf" value="68" description="" />
   </section>
  </section>
  <section name="vivado_usage" level="1" order="10" description="">
@@ -481,7 +483,7 @@
    <keyValuePair key="batchmode" value="1" description="" />
   </section>
   <section name="project_data" level="2" order="2" description="">
-   <keyValuePair key="constraintsetcount" value="3" description="" />
+   <keyValuePair key="constraintsetcount" value="1" description="" />
    <keyValuePair key="core_container" value="false" description="" />
    <keyValuePair key="currentimplrun" value="impl_1" description="" />
    <keyValuePair key="currentsynthesisrun" value="synth_1" description="" />
@@ -503,7 +505,7 @@
    <keyValuePair key="launch_simulation_vcs" value="0" description="" />
    <keyValuePair key="launch_simulation_xsim" value="0" description="" />
    <keyValuePair key="simulator_language" value="Mixed" description="" />
-   <keyValuePair key="srcsetcount" value="2" description="" />
+   <keyValuePair key="srcsetcount" value="29" description="" />
    <keyValuePair key="synthesisstrategy" value="Vivado Synthesis Defaults" description="" />
    <keyValuePair key="target_language" value="Verilog" description="" />
    <keyValuePair key="target_simulator" value="XSim" description="" />

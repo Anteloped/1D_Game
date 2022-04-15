@@ -84,7 +84,34 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/reset_conditioner_1.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/adder_13.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/alu16_7.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/beta_5.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/boolean_14.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/button_conditioner_1.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/compare_16.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/counter_12.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/counter_23.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/counter_24.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/counter_3.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/decimal_counter_26.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/decimal_counter_27.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/decimal_counter_28.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/decimal_counter_5_20.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/decoder_25.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/edge_detector_2.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/edge_detector_22.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/fsm_auto_9.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/look_up_table_8.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/multi_dec_ctr_19.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/multi_seven_seg_18.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/multiplier_17.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/pipeline_6.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/pn_gen_4.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/reg_files_10.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/seven_seg_21.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/shift_15.v
+  C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/variable_counter_11.v
   C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.srcs/sources_1/imports/verilog/au_top_0.v
 }
 OPTRACE "Adding files" END { }
@@ -96,14 +123,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/jiahu/Downloads/1D_Game/work/constraint/alchitry.xdc
-set_property used_in_implementation false [get_files C:/Users/jiahu/Downloads/1D_Game/work/constraint/alchitry.xdc]
-
-read_xdc C:/Users/jiahu/Downloads/1D_Game/work/constraint/io.xdc
-set_property used_in_implementation false [get_files C:/Users/jiahu/Downloads/1D_Game/work/constraint/io.xdc]
-
-read_xdc {{C:/Program Files/Alchitry/Alchitry Labs/library/components/au.xdc}}
-set_property used_in_implementation false [get_files {{C:/Program Files/Alchitry/Alchitry Labs/library/components/au.xdc}}]
+read_xdc C:/Users/jiahu/Downloads/1D_Game/work/constraint/custom_io.xdc
+set_property used_in_implementation false [get_files C:/Users/jiahu/Downloads/1D_Game/work/constraint/custom_io.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

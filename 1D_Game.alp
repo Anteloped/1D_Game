@@ -25,8 +25,6 @@
     <component>button_conditioner.luc</component>
     <src>beta.luc</src>
     <src>decimal_counter.luc</src>
-    <constraint lib="true">alchitry.acf</constraint>
-    <constraint lib="true">io.acf</constraint>
-    <constraint lib="true">au.xdc</constraint>
+    <constraint>custom_io.acf</constraint>
   </files>
 </project>

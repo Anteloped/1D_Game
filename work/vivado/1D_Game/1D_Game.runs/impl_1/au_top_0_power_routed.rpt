@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Fri Apr 15 17:31:58 2022
+| Date             : Fri Apr 15 20:42:47 2022
 | Host             : LAPTOP-E0JVRCMP running 64-bit major release  (build 9200)
 | Command          : report_power -file au_top_0_power_routed.rpt -pb au_top_0_power_summary_routed.pb -rpx au_top_0_power_routed.rpx
 | Design           : au_top_0
@@ -53,10 +53,10 @@ Table of Contents
 | On-Chip      | Power (W) | Used     | Available | Utilization (%) |
 +--------------+-----------+----------+-----------+-----------------+
 | Clocks       |     0.000 |        3 |       --- |             --- |
-| Slice Logic  |     0.000 |        2 |       --- |             --- |
-|   Others     |     0.000 |        2 |       --- |             --- |
+| Slice Logic  |     0.000 |        1 |       --- |             --- |
+|   Others     |     0.000 |        1 |       --- |             --- |
 | Signals      |    <0.001 |        1 |       --- |             --- |
-| I/O          |    <0.001 |       46 |       170 |           27.06 |
+| I/O          |    <0.001 |       69 |       170 |           40.59 |
 | Static Power |     0.072 |          |           |                 |
 | Total        |     0.072 |          |           |                 |
 +--------------+-----------+----------+-----------+-----------------+

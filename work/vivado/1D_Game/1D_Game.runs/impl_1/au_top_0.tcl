@@ -137,9 +137,7 @@ OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/jiahu/Downloads/1D_Game/work/vivado/1D_Game/1D_Game.runs/synth_1/au_top_0.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/jiahu/Downloads/1D_Game/work/constraint/alchitry.xdc
-  read_xdc C:/Users/jiahu/Downloads/1D_Game/work/constraint/io.xdc
-  read_xdc {{C:/Program Files/Alchitry/Alchitry Labs/library/components/au.xdc}}
+  read_xdc C:/Users/jiahu/Downloads/1D_Game/work/constraint/custom_io.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
